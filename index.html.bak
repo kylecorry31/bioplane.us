@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bioplane</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="The Coast to Coast Biofuel Airplane Project will combine the excitement of aviation with the leading edge in renewable energy technology. Using aviation biofuel in a single engine Cessna equipped with an amazingly efficient SMA diesel engine, we will achieve a 2,500 nautical mile flight from Rhode Island to California."
+        name="description">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link charset="utf-8" href="style.css" media="screen" rel="stylesheet" title="no title">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- <script src="clock.js" charset="utf-8"></script> -->
+</head>
+
+<body>
+    <a href="https://www.facebook.com/Bioplane-306429336146179/" target="_blank">
+        <div class="floating-button hidden-xs hidden-sm text-center" id="facebook-large">
+            <svg style="width:32px;height:32px" viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
+            </svg>
+        </div>
+    </a>
+    <a href="https://twitter.com/bioflight" target="_blank">
+        <div class="floating-button hidden-xs hidden-sm text-center" id="twitter-large">
+            <svg style="width:32px;height:32px" viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"
+                />
+            </svg>
+        </div>
+    </a>
+    <a href="http://biofuelairplane.blogspot.com/" target="_blank">
+        <div class="floating-button hidden-xs hidden-sm text-center" id="blogger-large">
+            <svg style="width:32px;height:32px" viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M14,13H9.95A1,1 0 0,0 8.95,14A1,1 0 0,0 9.95,15H14A1,1 0 0,0 15,14A1,1 0 0,0 14,13M9.95,10H12.55A1,1 0 0,0 13.55,9A1,1 0 0,0 12.55,8H9.95A1,1 0 0,0 8.95,9A1,1 0 0,0 9.95,10M16,9V10A1,1 0 0,0 17,11A1,1 0 0,1 18,12V15A3,3 0 0,1 15,18H9A3,3 0 0,1 6,15V8A3,3 0 0,1 9,5H13A3,3 0 0,1 16,8M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z"
+                />
+            </svg>
+        </div>
+    </a>
+    <a href="https://www.instagram.com/bioplane.us/" target="_blank">
+        <div class="floating-button hidden-xs hidden-sm text-center" id="insta-large">
+            <svg style="width:32px;height:32px" viewBox="0 0 24 24">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="#ffffff" d="M20,6.5A0.5,0.5 0 0,1 19.5,7H17.5A0.5,0.5 0 0,1 17,6.5V4.5A0.5,0.5 0 0,1 17.5,4H19.5A0.5,0.5 0 0,1 20,4.5M4.5,20A0.5,0.5 0 0,1 4,19.5V11H6.09C6.03,11.32 6,11.66 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12C18,11.66 17.96,11.32 17.91,11H20V19.5A0.5,0.5 0 0,1 19.5,20M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z"
+                    />
+                </svg> />
+            </svg>
+        </div>
+    </a>
+    <ul class="nav nav-pills nav-justified hidden-xs" id="nav">
+        <li>
+            <a href="#sponsors">Sponsors / Donate</a>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Kittyhawk Bioflight</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="http://www.skynrg.com/" target="_blank">SkyNRG Aviation Biofuel</a>
+                </li>
+                <li>
+                    <a href="outerbanks.pdf" target="_blank">Outer Banks Sentinel Article</a>
+                </li>
+                <li>
+                    <a href="valleybreeze.pdf" target="_blank">Valley Breeze Observer Article</a>
+                </li>
+                <li>
+                    <a href="bioflight.pdf" target="_blank">Paramus Flying Club Bioflight</a>
+                </li>
+                <li>
+                    <a href="smaBioflight.pdf" target="_blank">US Bioflight Validates SMA Engines</a>
+                </li>
+                <li>
+                    <a href="http://www.biofuelairplane.blogspot.com/" target="_blank">Kittyhawk Bioflight Blog</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="people.html" target="_blank">Biopilots and Team</a>
+        </li>
+        <li>
+            <a href="https://en.wikipedia.org/wiki/Aviation_biofuel" target="_blank">Aviation Biofuel</a>
+        </li>
+        <li>
+            <a href="http://www.smaengines.com" target="_blank">SMA Aviation<br>Diesel Engine</a>
+        </li>
+        <li>
+            <a href="http://www.flyingclub.org/" target="_blank">Paramus Flying Club</a>
+        </li>
+        <li class="hidden-sm hidden-xs">
+            <a href="http://www.biodieselpickup.blogspot.com/" target="_blank">Coast to Coast Biodiesel Pickup</a>
+        </li>
+
+        <li class="hidden-sm hidden-xs">
+            <a href="http://www.protium.us/" target="_blank">Protium Band / Fuel Cell T</a>
+        </li>
+        <li class="dropdown hidden-md hidden-lg">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Other Projects</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="http://www.biodieselpickup.blogspot.com/" target="_blank">Coast to Coast Biodiesal Pickup</a>
+                </li>
+                <li>
+                    <a href="http://www.protium.us/" target="_blank">Protium Band / Fuel Cell T</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://fosterponaganseths.ss11.sharpschool.com/" target="_blank">Ponaganset High School</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+    <div class="header-img">
+
+    </div>
+    <div class="header-text">
+        <h1>Coast to Coast Biofuel Airplane Project</h1>
+    </div>
+    <div class="subhead">
+        <h4>The Goal: A Coast to Coast Biofuel-Powered Flight from
+        <span class="visible-xs-inline">RI to CA</span>
+        <span class="hidden-xs">Rhode Island to California.</span>
+      </h4>
+    </div>
+    <!-- <div id="track" class="visible-lg">
+        <a class="ghost donate-ghost" href="https://www.flightradar24.com/data/aircraft/n4468n" target="_blank">
+      Track Bioplane N4468N
+    </a>
+    </div> -->
+    <!-- <div class="header-button visible-lg">
+        <a class="ghost donate-gofundme" href="https://www.gofundme.com/t9xsmgmc" target="_blank">
+        Donate on GoFundMe
+      </a>
+    </div> -->
+
+    <!-- <div class="visible-lg" id="scholarship">
+        <a href="https://www.gofundme.com/fuz7hs2s" class="ghost donate-gofundme" target="_blank">Donate to Scholarship</a>
+    </div> -->
+
+    <div id="announcement">
+        <img src="announcement.png" alt="Announcemnet" style="height: 30vh;" />
+    </div>
+    <!--
+    <div id="updates">
+      <h4 class="text-center">Flight Updates</h4>
+      <p>
+        9:30 AM 4/16 - Liftoff!
+      </p>
+    </div> -->
+
+    <section class="container" id="about">
+        <center><a class="ghost donate-gofundme" href="https://www.gofundme.com/t9xsmgmc" target="_blank">
+        Donate on GoFundMe
+      </a></center>
+        <center>
+            <br>
+            <img src="closeupPlane.JPG" alt="Bioplane Closeup" class="img-responsive" />
+        </center>
+        <a href="riMonthly.pdf"><h3 class="text-center"><br>Rhode Island Monthly</h3></a>
+        <a href="July Record.docx"><h3 class="text-center"><br>Bioplane sets Fuel Efficiency World Record</h3></a>
+        <p class="text-center section-text">
+            <br>The weather was good Tuesday July 12th and the aviation biofuel performed perfectly in the SMA engine. Thierry Saint Loup, Vice President of SMA Engines and Ross McCurdy flew Paramus Flying Club's SMA Cessna 182 for 848 nautical miles over
+            a nonstop triangular course for just over 9 hours to set a fuel efficiency World Record in the C 1-C class airplane, land, 1,000 - 1,750 kg.
+
+        </p>
+        <h3 class="text-center"><br>Coast to Coast Bioflight</h3>
+
+        <p class="text-center section-text">
+            <br> The Coast to Coast Bioplane landed back in Rhode Island at North Central State Airport on Monday April 25th at 5:22 PM to a warm reception of family, friends, and some friendly TV news reporters.
+            <br>
+            <br> After the years of preparation it felt great to achieve this flight and fly the entire 5,000 nm round trip to California and back with Aviation Biofuel. The aviation biofuel performed perfectly in the highly efficient SMA diesel engine over
+            the entire flight and clearly demonstrated that biofuels work.
+            <br>
+            <br> By increasing energy efficiency and using renewable energy in our vehicles, homes, and businesses we can save money, improve the environment, and move towards a Sustainable Future.
+            <br>
+            <br> This has been an amazing flight and it was great to meet so many people interested in aviation and renewable energy.
+            <br>
+            <br> We look forward to updating this website as we now work to achieve the Around the World Bioflight.
+            <br>
+            <br> Our most sincere thanks to everyone who made this flight possible!
+            <br>
+        </p>
+        <!-- <h1 class="text-center" id="countdown">X Days X Hours X Minutes Until Takeoff</h1> -->
+        <h3 class="text-center" id="flight-date">Bioplane lifted off on April 16th 2016 at 10:20 AM <br>
+    From Airventures Flying School, North Central State Airport, Rhode Island</h3>
+        <center><a class="ghost donate-ghost" href="https://www.flightradar24.com/data/aircraft/n4468n" target="_blank">
+    Track Bioplane N4468N
+  </a></center>
+        <h2 class="section-header">About</h2>
+        <br>
+        <p class="section-text">
+            The Coast to Coast Biofuel Airplane Project will combine the excitement of aviation with the leading edge in renewable energy technology. Using aviation biofuel in a single engine Cessna equipped with an amazingly efficient SMA diesel engine, we will
+            achieve a 2,500 nautical mile flight from Rhode Island to California.
+            <br>
+            <br>The key to a sustainable energy future is twofold, increasing energy efficiency and using renewable energy. By increasing energy efficiency of our homes, appliances, vehicles, etc. we use less energy to get what we need done. By using renewable
+            energy we are helping to ensure a sustainable future, a cleaner environment, and a better quality of life.
+            <br>
+            <br><b>This will be the first transcontinental flight using aviation biofuel in a certified light aircraft.
+      </b>
+            <br>
+            <br> The aviation biofuel is made from renewable Camelina plant seed oil and blended 50-50 with regular Jet A to meet ASTM D7566 standards. The biofuel was supplied by the Air Force in order to obtain additional aviation diesel engine test data.
+            The aviation biofuel blend is run through over twenty lab tests to ensure it meets or exceeds the required specifications and this aviation biofuel blend is a drop-in replacement for Jet A that can be used in jet engines, turboprop engines,
+            and aviation diesel engines. With 50% of the fuel made from renewable Camelina plant seed oil the emissions are reduced, the carbon footprint is significantly lower, and there is no lead in the fuel. This makes it much better for the environment.
+            <br>
+            <br>While some renewable energy technologies hold great promise but are not yet “ready for prime time”, diesel engines are a proven technology that has been in use for over 100 years. There is a reason the great 18 wheeler “big rig” trucks travelling
+            the world’s highways all use diesel engines. They are fuel efficient, powerful, and reliable.
+            <br>
+            <br>With rising fuel costs and environmental concerns about the lead that is still used in aviation gasoline, diesel engines are a great solution for most general aviation airplanes. Along with the benefits of greater fuel efficiency, reliability,
+            and lower emissions, aviation diesel engines can also use renewable aviation biofuels.
+            <br>
+            <br>The SMA aviation diesel engine in the single engine, four passenger Cessna 182 we will be flying is 30-40% more fuel efficient than the avgas burning stock engine that it replaced. This saves a lot of fuel, a lot of money, and is better for
+            the environment.
+            <br>
+            <br>Increasing energy efficiency and using renewable energy are the keys to a sustainable future. The Coast to Coast Biofuel Airplane Project will clearly demonstrate this to promote renewable energy, aviation, and the excitement of real world
+            science education.
+            <br>
+            <br>Blue Skies!
+        </p>
+        <br>
+        <br>
+    </section>
+    <section class="container" id="map">
+        <h1 class="section-header">Flight Route</h1>
+        <br>
+        <br>
+        <img alt="Trip Map" src="map.png" id="map-img" />
+        <br>
+        <br>
+    </section>
+    <section class="recent-news" id="news-coverage">
+        <h1 class="section-header">News Coverage</h1>
+        <br>
+        <div class="col-md-8 col-md-offset-2">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="http://turnto10.com/embed/news/local/father-son-to-fly-biofuel-plane-from-ri-to-california" scrolling="no" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen"
+                    oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe>
+            </div>
+            <div class="news-description">
+                <a href="http://turnto10.com/news/local/father-son-to-fly-biofuel-plane-from-ri-to-california" target="_blank"><h3>Father, son to fly biofuel plane from RI to California</h3></a>
+                <h4>By R.J. Heim, NBC 10 News - <small>March 30th 2016</small></h4>
+            </div>
+            <br>
+            <br>
+            <div class="news-description">
+                <a href="http://www.abc6.com/story/31605049/high-school-teacher-soaring-to-new-heights" target="_blank"><h3>Teacher making biofuel flight from RI to CA</h3></a>
+                <h4>By Melissa Randall, ABC 6 News - <small>March 30th 2016</small></h4>
+            </div>
+        </div>
+    </section>
+    <section class="container" id="videos">
+        <h2 class="section-header">Projects</h2>
+        <br>
+        <div class="col-md-8 col-md-offset-2">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/8jvH60tIchU" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe>
+            </div>
+            <br>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/IcUfcMi0I70?feature=player_detailpage" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen"
+                    webkitallowfullscreen="webkitallowfullscreen"></iframe>
+            </div>
+            <br>
+            <br>
+        </div>
+    </section>
+    <section class="container" id="plane">
+        <h2 class="section-header">Plane</h2>
+        <br>
+        <p class="section-text">
+            <a href="http://www.flyingclub.org/" target="_blank">Paramus Flying Club's</a> Cessna 182 will be fueled with a 50-50 blend of aviation biofuel and Jet A to power the fuel-sipping
+            <a href="http://www.smaengines.com/?lang=en" target="_blank">SMA</a> aviation diesel engine.
+        </p>
+        <br>
+        <img alt="Plane taking off" class="img-responsive" src="plane3.jpg" />
+        <br>
+        <br>
+        <img alt="Plane close up" class="img-responsive" src="plane2.jpg" />
+        <br>
+        <br>
+        <div id="plane-more-info">
+            <a class="ghost" href="http://www.flyingclub.org/current-fleet/cessna-182q-sma-diesel-n4468n/" target="_blank">PLANE</a> &nbsp; &nbsp;
+            <a class="ghost" href="http://www.smaengines.com/?lang=en" target="_blank">ENGINE</a>
+        </div>
+    </section>
+    <section class="container" id="sponsors">
+        <h2 class="section-header">Meet our Sponsors</h2>
+        <br>
+
+        <hr>
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.thmalloy.com/" target="_blank">
+                    <img alt="T.H. Malloy" class="sponsor" src="sponsors/thMalloy.jpg" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>T.H. Malloy</h2>
+                <p>
+                    The Malloy family has been in the fuel business since 1935, always providing a personal and reliable touch in the Rhode Island and Southern Massachusetts area. We pledge to continue our family commitment to a new and ever-changing field of energy. We
+                    offer full-service home heating, and on- and off-road diesel/biodiesel deliveries for transportation. We are Coast Guard Certified to do marine fueling. We are proud to be Rhode Island's leading biodiesel distributor and consumer.
+                    We exclusively use Rhode Island made biodiesel to fuel our own fleet. This is to help address some of the pressing energy concerns that face our country today as well as reduces our emissions and expense.
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.bose.com/" target="_blank">
+                    <img alt="Bose" class="sponsor" src="sponsors/boseHeadset.jpg" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Bose</h2>
+                <p>
+                    The Bose A20 Aviation Headsets are the best available and the choice of serious pilots around the World. The active noise cancelling is key to the crystal clear sound while their light weight and fit make them the most comfortable, even over the longest
+                    flights.
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.doxawatches.com/" target="_blank">
+                    <img alt="Doxa Watches" class="sponsor" src="sponsors/doxa.png" style="width: 120%" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Doxa Watches</h2>
+                <p>
+                    DOXA was founded in 1889 in Switzerland and their watches are legendary. Doxa watches have a history rich in car racing and aviation, and are renowned for making the World’s best dive watch. Waterproof to depths measured in thousands of feet, Doxa watches
+                    are ready for any adventure.
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.simulia.com/" target="_blank">
+                    <img alt="DS" class="sponsor" src="sponsors/ds.gif" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Abaqus</h2>
+                <p>
+                    Abaqus is a software company with its headquarters in Providence, Rhode Island. The Abaqus Unified FEA product suite offers powerful and complete solutions for both routine and sophisticated engineering problems covering a vast spectrum of industrial
+                    applications. In the automotive industry engineering work groups are able to consider full vehicle loads, dynamic vibration, multibody systems, impact/crash, nonlinear static, thermal coupling, and acoustic-structural coupling using
+                    a common model data structure and integrated solver technology. Best-in-class companies are taking advantage of Abaqus Unified FEA to consolidate their processes and tools, reduce costs and inefficiencies, and gain a competitive advantage.
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.arpin.com/" target="_blank">
+                    <img alt="Arpin" class="sponsor" src="sponsors/arpin.gif" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Arpin</h2>
+                <p>
+                    For over 100 years, the Arpin family and its worldwide agency network have exceeded customers' expectations with laser–focused attention on delivering high caliber moving services to relocating families.
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.renewablenow.biz/" target="_blank">
+                    <img alt="Renewable Now" class="sponsor" src="sponsors/rn.png" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>ReNewable Now</h2>
+                <p>
+                    ReNewable Now is the one network that is totally dedicated to advancing the principals of sustainability. The creation of the network was on May 1, 2012 when professionals from the business community and educational community came together with professionals
+                    in television, cable , radio, and new media technologies to focus on what they believe to be the next economy, the <strong>Green Economy</strong>.
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.toraytpa.com/" target="_blank">
+                    <img alt="Toray" class="sponsor" src="sponsors/toray.png" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Toray Plastics</h2>
+                <p>
+                    Toray Plastics is located in North Kingstown, Rhode Island and has the largest Solar installation in the state. As the only U.S. manufacturer of precision-performance polyester, polypropylene, metallized, and bio-based films, Toray produces 188 million
+                    pounds of film annually for flexible and rigid packaging, lidding, graphic, industrial, optical, and electronic applications.
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.southernnewengland.aaa.com/" target="_blank">
+                    <img alt="AAA" class="sponsor" src="sponsors/aaa.jpg" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>AAA Southern New England</h2>
+                <p>
+                    If you drive a car, you want to be a member of AAA. In case of a vehicle problem AAA Southern New England will be there to help. Like the time my car wouldn't start at the movie theater at midnight, in Winter, with the temperature a bone chilling 3 degrees
+                    Fahrenheit, with my kid. AAA SNE towed my car to my mechanic and took us home. AAA SNE is also great for trip planning and road maps, and they take great photos when it comes time to renew your Driver's License.
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.newportbiodiesel.com/" target="_blank">
+                    <img alt="newport biodiesel" class="sponsor" src="sponsors/NBD.jpg" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Newport Biodiesel</h2>
+                <p>
+                    Newport Biodiesel produces clean burning fuel from second use or waste vegetable oil. It can fuel any diesel engine or home heating furnace without modification. Newport Biodiesel is simple to use, biodegradable, nontoxic, and essentially free of sulfur
+                    and aromatics. Newport Biodiesel is ecologically the best and highest use of waste vegetable oil. Newport Biodiesel is committed to their sustainable model to protect the environment, reduce their carbon footprint and convert a locally
+                    generated waste product into a superior alternative fuel for use around New England. </p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.182stc.com/" target="_blank">
+                    <img alt="Fresh Pick STC" class="sponsor" src="sponsors/stc.jpg" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Fresh Pick STC</h2>
+                <p>
+                    If you have a Cessna 182 P or Q model the Fresh Pick Supplemental Type Certificate (STC) will increase the useful load of your Cessna 182P or 182Q by 150 to 160 pounds. Best of all, this new STC requires no parts, no modifications, and no installation
+                    labor costs. One low initial price, and your airplane suddenly gains greater utility, value, and safety benefits.
+                    <br>The Fresh Pick STC on the Cessna 182Q Bioplane is making it possible for me to take my son Aedan on the Coast to Coast Bioflight. Thanks Fresh Pick!
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.nexeosolutions.com/market-industry/chemicals/military-commercial-aircraft/" target="_blank">
+                    <img alt="Prist" class="sponsor" src="sponsors/prist.jpg" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Prist Aerospace-Nexeo Solutions</h2>
+                <p>
+                    Prist Aerospace-Nexeo Solutions makes Prist Hi Flash anti-icing aviation fuel additives for Jet fuel and Prist acrylic & plastic windshield cleaner. Prist windshield cleaner works safely and easily on all acrylic, stretched acrylic, polycarbonate, glass
+                    and coated glass aircraft windscreens. Prist windshield cleaner works inside and outside the aircraft, on metal and vinyl, without harming painted surfaces. Prist products are used around the world for military, commercial, and general
+                    aviation aircraft.
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="https://www.seattleavionics.com/default.aspx" target="_blank">
+                    <img alt="Seattle Avionics Software" class="sponsor" src="sponsors/seattleAvionics.png" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Seattle Avionics Software</h2>
+                <p>
+                    Seattle Avionics is one of the biggest names in Aviation Software. Their Voyager and FlyQ Electronic Flight Bags for PC's, IPads, and Smartphones include digital aviation charts and GPS technology to provide pilots the best situational awareness possible,
+                    making flying safer and more enjoyable.
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.randolphusa.com/" target="_blank" style="width: 80%;">
+                    <img alt="Randolph" class="sponsor" src="sponsors/randolph.png" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Randolph Handcrafted American Eyewear</h2>
+                <p>
+                    Randolph Handcrafted American Eyewear makes a wide selection of sunglasses for aviation and beyond, all made in USA.
+                    <br> Randolph's flagship Aviator sunglasses were originally built for the U.S. Military and surpass rigid military-spec standards. Standard issue since 1982, these are battle tested and suitable for the most rigorous and demanding use.
+                    Worn by pilots, taste-makers, and those who demand the best. </p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.aviation.levil.com/" target="_blank" style="width: 80%;">
+                    <img alt="icom" class="sponsor" src="sponsors/levil.png" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Levil Aviation</h2>
+                <p>
+                    Levil Aviation designs and manufactures aviation-grade GPS, ADS-B, and AHRS systems for pilots that pack a huge amount of technology in a small size and at an affordable price. Their ILevil2 systems turn an IPad or other tablet into an amazing glass panel
+                    that includes Weather and Traffic information to maximize situational awareness and safety while flying. </p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.fullcirclerecyclingri.com/" target="_blank">
+                    <img alt="Full Circle" class="sponsor" src="sponsors/fullCircleRecycling.png" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Full Circle Recycling</h2>
+                <p>
+                    Full Circle Recycling in Johnston, Rhode Island recycles everything from paper and cardboard to ferrous metals, car batteries, and vehicles. If it can be recycled, Full Circle Recycling can probably do it.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.pcu.org/" target="_blank">
+                    <img alt="pcu" class="sponsor" src="sponsors/pcu.gif" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Pawtucket Credit Union</h2>
+                <p>
+                    Providing The smarter way to bank is an endeavor that sets Pawtucket Credit Union apart from other banking institutions. As an organization founded by, and run for, the benefit of its members, this philosophy is woven throughout all business and civic
+                    activities. Importantly, it also translates into investment in the local communities where we all work and live. As the banking landscape continues to evolve, we will remain steadfast in our commitment to delivering The smarter way
+                    to bank and to assisting our members in achieving a bright financial future.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.icomamerica.com/en/" target="_blank" style="width: 80%;">
+                    <img alt="icom" class="sponsor" src="sponsors/icom.png" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Icom</h2>
+                <p>
+                    Icom makes radios for land, sea, and air. Their handheld Aviation radios are essential for pilots as back up radios while flying and monitoring communications on the ground.
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="http://www.baereaerospace.com/Pages/default.aspx" target="_blank" style="width: 80%;">
+                    <img alt="icom" class="sponsor" src="sponsors/baere.jpg" />
+                </a>
+            </div>
+            <div class="col-sm-8">
+                <h2>Baere Aerospace</h2>
+                <p>
+                    Baere is a woman-owned business certified in the state of Indiana, formed to fill a niche market in aerospace material management, specifically fuels, lubricants, adhesives, paints, and other organic coatings and seals.
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="sponsor-donate visible-lg">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input name="cmd" type="hidden" value="_s-xclick">
+                <input name="hosted_button_id" type="hidden" value="EYHNT7QGAFRYW">
+                <input alt="DONATE" class="ghost donate-ghost" height="50" name="submit" type="submit" value="Donate and help the Bioplane achieve this milestone Flight">
+        </div>
+        <div class="sponsor-donate hidden-lg">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input name="cmd" type="hidden" value="_s-xclick">
+                <input name="hosted_button_id" type="hidden" value="EYHNT7QGAFRYW">
+                <input alt="DONATE" class="ghost donate-ghost" height="50" name="submit" type="submit" value="Donate">
+        </div>
+    </section>
+    <div class="container-fluid" id="contact">
+        <h2 class="section-header">Contact</h2>
+        <br>
+        <div class="contact-card container">
+            <h2 id="name">Ross McCurdy</h2>
+            <p id="email">
+                Email:
+                <a href="mailto:rkmccurdy@yahoo.com" target="_blank">rkmccurdy@yahoo.com</a>
+            </p>
+            <p id="cell">
+                Cell: 401-241-6506
+            </p>
+            <p id="home">
+                Home: 401-231-7986
+            </p>
+            <p id="address">
+                Smithfield, RI 02917
+            </p>
+            <p id="other">
+                Please feel free to contact me for information on the Coast to Coast Biofuel Airplane Project or other renewable energy projects that I've worked with.
+            </p>
+        </div>
+    </div>
+    <div class="container-fluid" id="footer">
+        <div class="container">
+            <div id="copyright">
+                <p>
+                    Copyright © 2016 Coast to Coast Biofuel Airplane Project. All rights reserved.
+                </p>
+                <p>
+                    Site Designed by <a href="http://www.thegongoliers.com" target="_blank">The Gongoliers</a> - <a href="https://kylecorry31.github.io" target="_blank">Kyle Corry</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        (function(d, w) {
+            var x = d.getElementsByTagName('SCRIPT')[0];
+            var f = function() {
+                var s = d.createElement('SCRIPT');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = "//np.lexity.com/embed/YW/edc326824ef377503a9f33f723e4e811?id=b305e46cc371";
+                x.parentNode.insertBefore(s, x);
+            };
+            w.attachEvent ? w.attachEvent('onload', f) : w.addEventListener('load', f, false);
+        }(document, window));
+    </script>
+</body>
+
+</html>
+<!-- text below generated by server. PLEASE REMOVE -->
+<!-- Counter/Statistics data collection code -->
+<script language="JavaScript" src="http://l.yimg.com/d/lib/smb/js/hosting/cp/js_source/whv2_001.js"></script>
+<script language="javascript">
+    geovisit();
+</script>
+<noscript><img src="http://visit.webhosting.yahoo.com/visit.gif?us1456514825" alt="setstats" border="0" width="1" height="1"></noscript>
+<script type="text/javascript" src="https://s.yimg.com/mi/vs4/ywa.js"></script>
+<script type="text/javascript">
+    try {
+        var YWAGTracker = YWA.getTracker("10001849413879", "VSCALE4");
+        YWAGTracker.setDocumentName("WPAGE");
+        YWAGTracker.setDocumentGroup("YSBW");
+        YWAGTracker.setCF(7, "bioplane.us");
+        YWAGTracker.setCF(8, "w19");
+        YWAGTracker.submit();
+    } catch (eYWATCUnavailable) {}
+</script>
+<script type="text/javascript">
+    (function(d, w) {
+        var x = d.getElementsByTagName('SCRIPT')[0];
+        var f = function() {
+            var s = d.createElement('SCRIPT');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = "//np.lexity.com/embed/YW/edc326824ef377503a9f33f723e4e811?id=b305e46cc371";
+            x.parentNode.insertBefore(s, x);
+        };
+        w.attachEvent ? w.attachEvent('onload', f) : w.addEventListener('load', f, false);
+    }(document, window));
+</script>

@@ -1,0 +1,42 @@
+.btn-rounded {
+    border: none;
+    background: none;
+    border-radius: 32px;
+    background-color: rgb(0, 102, 255);
+    padding: 16px 64px;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+.btn-inactive {
+    background-color: gray;
+}
+
+.btn-rounded:hover {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(0, 92, 245);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.btn-inactive:hover {
+    text-decoration: none;
+    color: white;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.btn-rounded:active {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-rounded:visited {
+    text-decoration: none;
+    color: white;
+}
