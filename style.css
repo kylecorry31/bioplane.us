@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('mdc.elevation.min.css');
 
 body, html {
     padding: 0;
@@ -16,6 +17,12 @@ iframe {
 #hero {
     background: linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)), url(plane_blur.jpg);
     background-position: center;
+}
+#hero-people {
+    background: linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)), url(plane3_blur.jpg);
+    background-position: bottom;
+}
+#hero, #hero-people {
     background-repeat: no-repeat;
     background-size: cover;
     height: 70vh;
@@ -96,7 +103,6 @@ iframe {
     height: 50px;
     margin: 8px;
     border-radius: 100%;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12);
     z-index: 100;
     line-height: 50px;
     vertical-align: middle;
@@ -140,6 +146,9 @@ section {
     margin-right: auto;
     max-width: 720px;
     padding: 32px 16px;
+}
+section.full-width {
+    max-width: 960px;
 }
 .center, .text-center {
     text-align: center;
@@ -292,50 +301,28 @@ input.ghost {
 input.ghost:hover {
     background-color: #0066ff !important;
 }
-#kyle-logo {
-    width: 200px;
-    height: auto;
-    opacity: 0.8;
-}
-#kyle-logo:hover {
-    opacity: 1;
-}
-#people-header {
-  background-color: #0066ff;
-  color: white;
-  height: 40vh;
-  box-shadow: 0 2px 4px #888888;
-}
-#people-header h1 {
-  text-align: center;
-  font-size: 48px;
-  line-height: 40vh;
-  vertical-align: middle;
-  margin:0;
-}
 #people {
-  padding-top: 32px;
-  padding-bottom: 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-#back {
-  position: absolute;
-  margin: 8px;
+.person {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 16px);
+    margin-bottom: 16px;
 }
-.person-name {
-  font-size: 38px;
-  margin-top: 0;
-  font-weight: bold;
+.person-details > * {
+    margin: 0;
+    margin-bottom: 8px;
 }
-.person-title {
-  font-size: 24px;
-  color: rgba(0, 0, 0, 0.6);
+.person-details p {
+    font-size: 12px;
 }
-.person-desc {
-  font-size: 18px;
-}
-.person-desc a {
-  color: #0066ff;
-  display: inline !important;
+.person img {
+    width: 100%;
+    height: auto;
 }
 .bold {
     font-weight: bold;
