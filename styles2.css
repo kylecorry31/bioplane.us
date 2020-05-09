@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+#hero {
+  background-image: url("plane_hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+#hero-subtitle {
+  opacity: 0.6;
+}
+
+#plane-info {
+  background-image: url("plane3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+#plane-details img {
+  /* max-width: 50%; */
+  height: 64px;
+}
+
+#support {
+  background-color: rgba(0, 190, 255, 0.2);
+}
+
+#sponsors-grid > img {
+  width: calc(25% - 64px);
+  margin: 0px 32px 64px 32px;
+}
